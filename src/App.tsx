@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import { Navbar } from './components/shared/Navbar'
+import { Switch, Route } from 'react-router-dom'
+import { Hero } from './components/homepage/Hero'
+import { About } from './components/homepage/About'
+import { Footer } from './components/shared/Footer'
+import { Contact } from './components/homepage/Contact'
 
 function App() {
+  const [activeTab, setActiveTab] = useState(0)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
       </header>
+        <Switch>
+          <Route path="/">
+            <Hero />
+            <About />
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
     </div>
   );
 }

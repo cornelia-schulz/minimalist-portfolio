@@ -1,38 +1,247 @@
+:root {
+  --cyan: #5FB4A2;
+  --darkBlue: #203A4C;
+  --greyDarkBlue: #33323D;
+  --lightGrey: #FAFAFA;
+  --lightGreyTextField: #EAEAEB;
+  --red: #F43030;
+}
+
 .App {
+  margin: 50px 20px;
+}
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 36px;
+}
+
+p {
+  color: var(--greyDarkBlue);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.small-p {
+  color: var(--greyDarkBlue);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 30px;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  display: flex;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 48px;
+  justify-content: space-around;
+  letter-spacing: 2px;
+  text-decoration: none;
+  width: 200px;
+}
+
+.button:disabled {
+  background-color: var(--lightGreyTextField);
+}
+
+.button-primary {
+  background-color: var(--darkBlue);
+  color: var(--lightGrey);
+}
+
+.button-primary:hover, .button-primary:focus {
+  background-color: var(--cyan);
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid var(--greyDarkBlue);
+  color: var(--darkBlue);
+}
+
+.button-secondary:hover, .button-secondary:focus {
+  background-color: var(--greyDarkBlue);
+  color: var(--lightGrey);
+}
+
+.button-secondary:disabled {
+  border-color: var(--lightGreyTextField);
+  color: var(--lightGreyTextField);
+}
+
+.button-img-container {
+  text-align: center;
+  width: 48px;
+}
+
+.button-img-container>.button-img {
+  width: 15px;
+}
+
+.button-primary:hover, .button-primary:focus + .button-img-container>.button-img {
+  fill: var(--lightGrey);
+}
+
+.button-text {
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin-top: 50;
+}
+
+.navigation {
+  display: flex;
+}
+
+.nav li {
+  color: var(--greyDarkBlue);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 14.1px;
+  margin-left: 50px;
+}
+
+.nav li a {
+  color: var(--greyDarkBlue);
+  text-decoration: none;
+}
+
+.nav li .active {
+  color: var(--cyan);
+}
+
+.hero img {
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  margin-top: 50px;
+}
+
+.about .about-img {
+  flex-basis: 50%;
+}
+
+.about-text {
+  border-bottom: 1px solid var(--lightGreyTextField);
+  border-top: 1px solid var(--lightGreyTextField);
+  flex-basis: 30%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.about-text p {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.contact {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact h2 {
+  flex-basis: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.horizontal-line {
+  border: 1px solid var(--lightGreyTextField);
+  flex-basis: 40%;
+  height: 1px;
+}
+
+.footer {
+  background-color: var(--greyDarkBlue);
+  color: var(--lightGrey);
+  display: flex;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.footer-left {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: inherit;
+}
+
+.footer li {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 14.1px;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+.footer li a {
+  color: var(--lightGrey);
+  text-decoration: none;
+}
+
+.footer svg path {
+  fill: var(--lightGrey);
+}
+
+@media only screen and (min-width: 500px) {
+  .hero {
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero h1 {
+    margin: 50px 0;
+  }
+
+  .hero-overlay {
+    background-color: var(--lightGrey);
+    bottom: 0;
+    max-width: 445px;
+    position: absolute;
   }
 }
