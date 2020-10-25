@@ -1,0 +1,52 @@
+@import 'Colours';
+
+.contact-me {
+  border-bottom: 1px solid $lightGreyTextField;
+  border-top: 1px solid $lightGreyTextField;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.contact-me h2 {
+  margin-bottom: 30px;
+}
+
+.contact-me .social-icons {
+  margin-top: 30px;
+}
+
+.contact-me .social-icons a {
+  margin-right: 15px;
+}
+
+.contact-me-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-me {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-me h2,
+  .contact-me .contact-me-content,
+  .contact-me-form h2,
+  .contact-me-form form {
+    flex-basis: 50%;
+  }
+
+  .contact-me-form {
+    flex-direction: row;
+  }
+}

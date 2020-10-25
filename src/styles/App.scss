@@ -1,11 +1,4 @@
-:root {
-  --cyan: #5FB4A2;
-  --darkBlue: #203A4C;
-  --greyDarkBlue: #33323D;
-  --lightGrey: #FAFAFA;
-  --lightGreyTextField: #EAEAEB;
-  --red: #F43030;
-}
+@import 'Colours';
 
 .App {
   position: relative;
@@ -16,7 +9,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: var(--cyan);
+  color: $cyan;
 }
 
 h1 {
@@ -36,7 +29,7 @@ h3 {
 }
 
 p {
-  color: var(--greyDarkBlue);
+  color: $greyDarkBlue;
   font-family: 'Public Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -44,10 +37,48 @@ p {
 }
 
 .small-p {
-  color: var(--greyDarkBlue);
+  color: $greyDarkBlue;
   font-family: 'Public Sans', sans-serif;
   font-size: 0.9375rem;
   line-height: 30px;
+}
+
+label {
+  color: $greyDarkBlue;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input {
+  background-color: $lightGreyTextField;
+  border: none;
+  height: 48px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+textarea {
+  background-color: $lightGreyTextField;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input::placeholder,
+input::-moz-placeholder,
+input::-ms-input-placeholder,
+input::-webkit-input-placeholder {
+  font-family: 'Public Sans', sans-serif;
+  padding-left: 10px;
+}
+
+textarea::placeholder,
+textarea::-moz-placeholder {
+  font-family: 'Public Sans', sans-serif;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .flex {
@@ -77,32 +108,32 @@ p {
 }
 
 .button:disabled {
-  background-color: var(--lightGreyTextField);
+  background-color: $lightGreyTextField;
 }
 
 .button-primary {
-  background-color: var(--darkBlue);
-  color: var(--lightGrey);
+  background-color: $darkBlue;
+  color: $lightGrey;
 }
 
 .button-primary:hover, .button-primary:focus {
-  background-color: var(--cyan);
+  background-color: $cyan;
 }
 
 .button-secondary {
   background-color: transparent;
-  border: 1px solid var(--greyDarkBlue);
-  color: var(--darkBlue);
+  border: 1px solid $greyDarkBlue;
+  color: $darkBlue;
 }
 
 .button-secondary:hover, .button-secondary:focus {
-  background-color: var(--greyDarkBlue);
-  color: var(--lightGrey);
+  background-color: $greyDarkBlue;
+  color: $lightGrey;
 }
 
 .button-secondary:disabled {
-  border-color: var(--lightGreyTextField);
-  color: var(--lightGreyTextField);
+  border-color: $lightGreyTextField;
+  color: $lightGreyTextField;
 }
 
 .button-img-container {
@@ -115,11 +146,11 @@ p {
 }
 
 .button-primary:hover + .button-img g {
-  fill: var(--lightGrey);
+  fill: $lightGrey;
 }
 
 .button-primary:hover, .button-primary:focus + .button-img-container>.button-img {
-  fill: var(--lightGrey);
+  fill: $lightGrey;
 }
 
 .button-text {
@@ -129,7 +160,7 @@ p {
 
 .app-container {
   margin: 50px 20px 0;
-  min-height: 100vh;
+  min-height: 97vh;
   padding-bottom: 260px;
 }
 
@@ -150,7 +181,7 @@ p {
 }
 
 .nav li {
-  color: var(--greyDarkBlue);
+  color: $greyDarkBlue;
   font-family: 'Public Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 900;
@@ -160,16 +191,16 @@ p {
 }
 
 .nav li a {
-  color: var(--greyDarkBlue);
+  color: $greyDarkBlue;
 }
 
 .nav li a:focus,
 .nav li a:hover {
-  color: var(--cyan);
+  color: $cyan;
 }
 
 .nav li .active {
-  color: var(--cyan);
+  color: $cyan;
 }
 
 .nav .mobile-nav img {
@@ -186,7 +217,7 @@ p {
 
 .mobile-navigation {
   align-items: center;
-  background-color: var(--greyDarkBlue);
+  background-color: $greyDarkBlue;
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
@@ -201,60 +232,13 @@ p {
 }
 
 .mobile-navigation li a {
-  color: var(--lightGrey);
-}
-
-.hero img {
-  width: 100%;
-}
-
-.hero-overlay h1 {
-  margin-bottom: 30px;
-  margin-top: 20px;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-.about .about-img {
-  flex-basis: 50%;
-}
-
-.about-text {
-  border-bottom: 1px solid var(--lightGreyTextField);
-  border-top: 1px solid var(--lightGreyTextField);
-  flex-basis: 30%;
-  margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
-.about-text p {
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.contact {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 100px;
-  margin-top: 100px;
-}
-
-.contact h2 {
-  margin-bottom: 30px;
-  text-align: center;
+  color: $lightGrey;
 }
 
 .footer {
-  background-color: var(--greyDarkBlue);
+  background-color: $greyDarkBlue;
   bottom: 0;
-  color: var(--lightGrey);
+  color: $lightGrey;
   display: flex;
   padding: 50px;
   position: absolute;
@@ -299,54 +283,21 @@ p {
 }
 
 .footer li a {
-  color: var(--lightGrey);
+  color: $lightGrey;
 }
 
 .footer li a:focus,
 .footer li a:hover {
-  color: var(--cyan);
+  color: $cyan;
 }
 
 .footer svg path {
-  fill: var(--lightGrey);
+  fill: $lightGrey;
 }
 
 @media only screen and (min-width: 500px) {
   .app-container {
     padding-bottom: 90px;
-  }
-
-  .hero {
-    position: relative;
-  }
-
-  .hero h1 {
-    margin: 50px 0;
-  }
-
-  .hero-overlay {
-    background-color: var(--lightGrey);
-    bottom: 0;
-    max-width: 445px;
-    position: absolute;
-  }
-
-  .about {
-    flex-direction: row;
-  }
-
-  .contact {
-    flex-direction: row;
-  }
-
-  .contact h2 {
-    flex-basis: 30%;
-  }
-
-  .horizontal-line {
-    border: 1px solid var(--lightGreyTextField);
-    flex-basis: 40%;
-    height: 1px;
   }
 
   .footer {

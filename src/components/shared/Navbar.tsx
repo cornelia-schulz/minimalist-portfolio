@@ -27,9 +27,16 @@ export const Navbar: React.FC<IProps> = ({activeTab, setActiveTab}) => {
     }
   ]
   const navItems = menuItems.map((item, index) => {
-    if (index === activeTab) return <li key={index}><Link className="active" to={item.link}>{item.name}</Link></li>
-    else return <li key={index}><Link to={item.link}>{item.name}</Link></li>
+    if (index === activeTab) return <li key={index}><Link className="active" to={item.link} onClick={() => handleClick(index)}>{item.name}</Link></li>
+    else return <li key={index}><Link to={item.link} onClick={() => handleClick(index)}>{item.name}</Link></li>
   })
+
+  const handleClick = (tab: number) => {
+    setActiveTab(tab)
+    if (isMobile) {
+      toggleMenu()
+    }
+  }
 
   const toggleMenu = () => {
     const mobileMenu = document.getElementById('mobile-navigation')

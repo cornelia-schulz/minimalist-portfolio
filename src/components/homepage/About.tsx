@@ -1,7 +1,11 @@
 import React from 'react'
 import { Button } from '../shared/Button'
 
-export const About = () => {
+interface IProps {
+  setActiveTab: (tab:number) => void
+}
+
+export const About: React.FC<IProps> = ({setActiveTab}) => {
   return (
     <div className="container about">
       <img 
@@ -23,7 +27,13 @@ export const About = () => {
         When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s 
         going for a walk, run or cycling. I’d love you to check out my work.
         </p>
-        <Button classes="button button-secondary" hasImage={false} text="GO TO PORTFOLIO" url="/portfolio" />
+        <Button
+          classes="button button-secondary"
+          hasImage={false}
+          setActiveTab={setActiveTab}
+          tab={1}
+          text="GO TO PORTFOLIO"
+          url="/portfolio" />
       </article>
     </div>
   )

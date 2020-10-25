@@ -1,0 +1,83 @@
+@import 'Colours';
+
+.hero img {
+  width: 100%;
+}
+
+.hero-overlay h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.about .about-img {
+  flex-basis: 50%;
+}
+
+.about-text {
+  border-bottom: 1px solid $lightGreyTextField;
+  border-top: 1px solid $lightGreyTextField;
+  flex-basis: 30%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.about-text p {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .hero {
+    position: relative;
+  }
+
+  .hero h1 {
+    margin: 50px 0;
+  }
+
+  .hero-overlay {
+    background-color: $lightGrey;
+    bottom: 0;
+    max-width: 445px;
+    position: absolute;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+
+  .contact h2 {
+    flex-basis: 30%;
+  }
+
+  .horizontal-line {
+    border: 1px solid $lightGreyTextField;
+    flex-basis: 40%;
+    height: 1px;
+  }
+}
