@@ -8,12 +8,21 @@
 }
 
 .App {
-  margin: 50px 20px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: var(--cyan);
 }
 
 h1 {
-  font-size: 3.125rem;
-  line-height: 50px;
+  font-size: 2.5rem;
+  letter-spacing: -0.36px;
+  line-height: 40px;
 }
 
 h2 {
@@ -41,6 +50,14 @@ p {
   line-height: 30px;
 }
 
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
   margin: 20px auto;
   max-width: 1100px;
@@ -56,7 +73,6 @@ p {
   height: 48px;
   justify-content: space-around;
   letter-spacing: 2px;
-  text-decoration: none;
   width: 200px;
 }
 
@@ -98,6 +114,10 @@ p {
   width: 15px;
 }
 
+.button-primary:hover + .button-img g {
+  fill: var(--lightGrey);
+}
+
 .button-primary:hover, .button-primary:focus + .button-img-container>.button-img {
   fill: var(--lightGrey);
 }
@@ -105,6 +125,12 @@ p {
 .button-text {
   flex: 1;
   text-align: center;
+}
+
+.app-container {
+  margin: 50px 20px 0;
+  min-height: 100vh;
+  padding-bottom: 260px;
 }
 
 .nav {
@@ -116,6 +142,11 @@ p {
 
 .navigation {
   display: flex;
+}
+
+.nav img {
+  height: 30px;
+  width: 50px;
 }
 
 .nav li {
@@ -130,19 +161,61 @@ p {
 
 .nav li a {
   color: var(--greyDarkBlue);
-  text-decoration: none;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+  color: var(--cyan);
 }
 
 .nav li .active {
   color: var(--cyan);
 }
 
+.nav .mobile-nav img {
+  height: 20px;
+  width: 30px;
+}
+
+.mobile-nav {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mobile-navigation {
+  align-items: center;
+  background-color: var(--greyDarkBlue);
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 30px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.mobile-navigation li {
+  margin-left: 0;
+  padding: 10px;
+}
+
+.mobile-navigation li a {
+  color: var(--lightGrey);
+}
+
 .hero img {
   width: 100%;
 }
 
+.hero-overlay h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 .about {
   display: flex;
+  flex-direction: column;
   margin-top: 50px;
 }
 
@@ -155,6 +228,7 @@ p {
   border-top: 1px solid var(--lightGreyTextField);
   flex-basis: 30%;
   margin: 0 auto;
+  padding-bottom: 50px;
   padding-top: 50px;
 }
 
@@ -166,34 +240,31 @@ p {
 .contact {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 100px;
   margin-top: 100px;
 }
 
 .contact h2 {
-  flex-basis: 30%;
-}
-
-.horizontal-line {
-  border: 1px solid var(--lightGreyTextField);
-  flex-basis: 40%;
-  height: 1px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .footer {
   background-color: var(--greyDarkBlue);
+  bottom: 0;
   color: var(--lightGrey);
   display: flex;
-  height: 80px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px;
+  position: absolute;
   width: 100%;
 }
 
 .footer-left {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -204,10 +275,17 @@ p {
 .footer-container {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1100px;
   width: inherit;
+}
+
+.footer .bottom-nav {
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .footer li {
@@ -215,14 +293,18 @@ p {
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 2px;
-  line-height: 14.1px;
+  line-height: 40px;
   list-style-type: none;
   margin: 0 10px;
 }
 
 .footer li a {
   color: var(--lightGrey);
-  text-decoration: none;
+}
+
+.footer li a:focus,
+.footer li a:hover {
+  color: var(--cyan);
 }
 
 .footer svg path {
@@ -230,6 +312,10 @@ p {
 }
 
 @media only screen and (min-width: 500px) {
+  .app-container {
+    padding-bottom: 90px;
+  }
+
   .hero {
     position: relative;
   }
@@ -243,5 +329,52 @@ p {
     bottom: 0;
     max-width: 445px;
     position: absolute;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+
+  .contact h2 {
+    flex-basis: 30%;
+  }
+
+  .horizontal-line {
+    border: 1px solid var(--lightGreyTextField);
+    flex-basis: 40%;
+    height: 1px;
+  }
+
+  .footer {
+    height: 80px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer li {
+    line-height: 14.1px;
+  }
+
+  .footer-left {
+    flex-direction: row;
+  }
+
+  .footer .bottom-nav {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.125rem;
+    letter-spacing: -0.45px;
+    line-height: 50px;
   }
 }

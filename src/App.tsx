@@ -11,6 +11,7 @@ function App() {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <div className="App">
+      <div className="app-container">
       <header className="App-header">
         <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
       </header>
@@ -21,7 +22,8 @@ function App() {
             <Contact />
           </Route>
         </Switch>
-        <Footer />
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactComponent as DownArrows } from '../../icons/down-arrows.svg'
 
 interface IProps {
   classes: string
@@ -12,7 +13,7 @@ export const Button: React.FC<IProps> = ({classes, hasImage, text, url}) => {
     <a href={url} className={classes}>
       {hasImage &&
         <div className="button-img-container">
-          <img alt="down arrows"className="button-img" src="/images/icons/down-arrows.svg" />
+          <DownArrows className="button-img" />
         </div>
       }
       <span className="button-text">{text}</span>
