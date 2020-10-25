@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 
 interface IProps {
@@ -9,6 +9,7 @@ interface IProps {
 
 export const Navbar: React.FC<IProps> = ({activeTab, setActiveTab}) => {
 
+  const history = useHistory()
   const isDesktopOrTablet = useMediaQuery({ query: '(min-device-width: 500px)'})
   const isMobile = useMediaQuery({ query: '(max-device-width: 499px)'})
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -36,6 +37,9 @@ export const Navbar: React.FC<IProps> = ({activeTab, setActiveTab}) => {
     if (isMobile) {
       toggleMenu()
     }
+    if (tab === 0) history.push('/')
+    else if (tab === 1) history.push('/portfolio')
+    else if (tab === 2) history.push('/contact')
   }
 
   const toggleMenu = () => {

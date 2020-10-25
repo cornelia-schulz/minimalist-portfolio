@@ -66,16 +66,17 @@ textarea {
   width: 100%;
 }
 
-input::placeholder,
-input::-moz-placeholder,
-input::-ms-input-placeholder,
-input::-webkit-input-placeholder {
+input::placeholder {
   font-family: 'Public Sans', sans-serif;
   padding-left: 10px;
 }
 
-textarea::placeholder,
-textarea::-moz-placeholder {
+::-moz-placeholder {
+  font-family: 'Public Sans', sans-serif;
+  padding-left: 10px;
+}
+
+textarea::placeholder {
   font-family: 'Public Sans', sans-serif;
   padding-left: 10px;
   padding-top: 10px;
