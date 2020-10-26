@@ -39,7 +39,7 @@ export const PortfolioItems = () => {
 
   const portfolioItems = portfolio.map((item, index) => {
     const srcSet = item.imageDesktop + ' 540w, ' + item.imageTablet + ' 339w, ' + item.imageMobile + ' 311w'
-    const url = '/portfolio/' + index
+    const url = '/portfolio/' + item.title.toLocaleLowerCase()
     if (isDesktopOrTablet) {
       if (index % 2 === 0) {
         return <div className="portfolio-item" key={index}>
@@ -52,7 +52,7 @@ export const PortfolioItems = () => {
           <div className="portfolio-description">
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url="/portfolio/" />
+            <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url={url} />
           </div>
         </div>
       } else {
@@ -81,7 +81,7 @@ export const PortfolioItems = () => {
         <div className="portfolio-description">
           <h2>{item.title}</h2>
           <p>{item.description}</p>
-          <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url="/portfolio/" />
+          <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url={url} />
         </div>
       </div>
     }

@@ -12,6 +12,7 @@ import { Contact } from './components/homepage/Contact'
 import { ContactMe } from './components/contact/ContactMe'
 import { ContactForm } from './components/contact/ContactForm'
 import { PortfolioItems } from './components/portfolio/PortfolioItems'
+import { PortfolioItem } from './components/portfolio/PortfolioItem'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
   useEffect(() => {
     if (location.pathname === '/contact') setActiveTab(2)
     else if (location.pathname === '/portfolio') setActiveTab(1)
+    else setActiveTab(45)
   }, [location])
 
   
@@ -34,6 +36,10 @@ function App() {
           <Route path="/contact">
             <ContactMe />
             <ContactForm />
+          </Route>
+          <Route path="/portfolio/:slug">
+            <PortfolioItem />
+            <Contact setActiveTab={setActiveTab} />
           </Route>
           <Route path="/portfolio">
             <PortfolioItems />
