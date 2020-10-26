@@ -6,6 +6,7 @@ interface IProps {
 }
 
 export const About: React.FC<IProps> = ({setActiveTab}) => {
+
   return (
     <div className="container about">
       <img 

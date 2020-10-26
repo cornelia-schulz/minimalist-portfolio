@@ -21,6 +21,7 @@ function App() {
 
   useEffect(() => {
     if (location.pathname === '/contact') setActiveTab(2)
+    else if (location.pathname === '/') setActiveTab(0)
     else if (location.pathname === '/portfolio') setActiveTab(1)
     else setActiveTab(45)
   }, [location])

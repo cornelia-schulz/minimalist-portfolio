@@ -40,7 +40,7 @@ export const ContactForm = () => {
           placeholder="How can I help?"
           value={message}
         />
-        <Button classes="button button-primary" hasImage={false} text="SEND MESSAGE" url="" />
+        <Button classes="button button-primary" hasImage={false} text="SEND MESSAGE" />
       </form>
     </article>
   )

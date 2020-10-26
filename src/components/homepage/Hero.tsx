@@ -14,7 +14,7 @@ export const Hero = () => {
       />
       <div className="hero-overlay">
         <h1>Hey, I'm Alex Spencer and I love building beautiful websites</h1>
-        <Button classes="button button-primary" hasImage={true} text="ABOUT ME" url="#"/>
+        <Button classes="button button-primary" hasImage={true} text="ABOUT ME" />
       </div>
     </div>
   )
