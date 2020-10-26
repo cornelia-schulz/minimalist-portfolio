@@ -1,2 +1,34 @@
 @import 'Colours';
 
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.portfolio-description {
+  border-bottom: 1px solid $lightGreyTextField;
+  border-top: 1px solid $lightGreyTextField;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  min-height: 368px;
+}
+
+
+@media only screen and (min-width: 500px) {
+  .portfolio-item {
+    flex-direction: row;
+  }
+
+  .portfolio-item img,
+  .portfolio-item .portfolio-description {
+    flex-basis: 50%;
+  }
+
+  .portfolio-description {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}

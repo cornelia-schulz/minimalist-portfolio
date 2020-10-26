@@ -11,6 +11,7 @@ import { Footer } from './components/shared/Footer'
 import { Contact } from './components/homepage/Contact'
 import { ContactMe } from './components/contact/ContactMe'
 import { ContactForm } from './components/contact/ContactForm'
+import { PortfolioItems } from './components/portfolio/PortfolioItems'
 
 function App() {
 
@@ -34,7 +35,10 @@ function App() {
             <ContactMe />
             <ContactForm />
           </Route>
-          <Route path="/portfolio"></Route>
+          <Route path="/portfolio">
+            <PortfolioItems />
+            <Contact setActiveTab={setActiveTab} />
+          </Route>
           <Route path="/">
             <Hero />
             <About setActiveTab={setActiveTab} />
