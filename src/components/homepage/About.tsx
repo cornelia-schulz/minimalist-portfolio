@@ -16,7 +16,7 @@ export const About: React.FC<IProps> = ({setActiveTab}) => {
         /images/homepage/tablet/image-homepage-profile.jpg 281w,
         /images/homepage/mobile/image-homepage-profile.jpg 311w"
         sizes="(min-width: 36em) 45vw, 100vw"
-        src="/images/homepage/mobile/image-homepage-profile.jpg 311w"
+        src="/images/homepage/mobile/image-homepage-profile.jpg"
       />
       <article className="about-text">
         <h2>About Me</h2>

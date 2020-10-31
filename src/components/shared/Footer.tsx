@@ -22,9 +22,9 @@ export const Footer: React.FC<IProps> = ({setActiveTab}) => {
           </ul>
         </div>
         <ul className="social-icons">
-          <li><Link to=""><Github /></Link></li>
-          <li><Link to=""><Twitter /></Link></li>
-          <li><Link to=""><LinkedIn /></Link></li>
+          <li><Link to="https://github.com/cornelia-schulz"><span className="sr-only">Link to Github</span><Github /></Link></li>
+          <li><Link to="https://twitter.com"><span className="sr-only">Link to Twitter</span><Twitter /></Link></li>
+          <li><Link to="https://www.linkedin.com/in/cornelia-schulz/"><span className="sr-only">Link to LinkedIn</span><LinkedIn /></Link></li>
         </ul>
       </div>
     </footer>

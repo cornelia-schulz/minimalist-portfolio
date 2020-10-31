@@ -10,7 +10,7 @@ export const Hero = () => {
         /images/homepage/tablet/image-homepage-hero.jpg 688w,
         /images/homepage/mobile/image-homepage-hero.jpg 311w"
         sizes="(min-width: 36em) 100vw"
-        src="/images/homepage/mobile/image-homepage-hero.jpg 311w"
+        src="/images/homepage/mobile/image-homepage-hero.jpg"
       />
       <div className="hero-overlay">
         <h1>Hey, I'm Alex Spencer and I love building beautiful websites</h1>
