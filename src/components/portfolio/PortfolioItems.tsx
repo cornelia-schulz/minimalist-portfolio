@@ -49,7 +49,7 @@ export const PortfolioItems = () => {
             srcSet={srcSet}
             src={item.imageMobile}
           />
-          <div className="portfolio-description">
+          <div className="portfolio-description portfolio-description-right">
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url={url} />
@@ -57,7 +57,7 @@ export const PortfolioItems = () => {
         </div>
       } else {
         return <div className="portfolio-item" key={index}>
-          <div className="portfolio-description">
+          <div className="portfolio-description portfolio-description-left">
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <Button classes="button button-secondary" hasImage={false} text="VIEW PROJECT" url={url} />
